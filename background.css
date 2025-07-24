@@ -1,0 +1,64 @@
+body {
+  background: #1d2023;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de humo animado */
+.smoke {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.smoke span {
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(77,80,83,0.15) 0%, rgba(29,32,35,0.05) 80%, transparent 100%);
+  border-radius: 50%;
+  filter: blur(30px);
+  animation: moveSmoke 16s linear infinite;
+}
+
+.smoke span:nth-child(1) {
+  left: 10vw;
+  top: 20vh;
+  animation-delay: 0s;
+}
+.smoke span:nth-child(2) {
+  left: 60vw;
+  top: 10vh;
+  animation-delay: 4s;
+}
+.smoke span:nth-child(3) {
+  left: 30vw;
+  top: 60vh;
+  animation-delay: 8s;
+}
+.smoke span:nth-child(4) {
+  left: 70vw;
+  top: 70vh;
+  animation-delay: 12s;
+}
+
+@keyframes moveSmoke {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-40px) scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+} 
