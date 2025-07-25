@@ -1,12 +1,11 @@
 body {
-  background: #1d2023;
+  background: #000000;
   min-height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-
-/* Efecto de humo animado */
+/* Efecto de humo realista */
 .smoke {
   position: fixed;
   top: 0;
@@ -15,51 +14,89 @@ body {
   height: 100vh;
   pointer-events: none;
   z-index: 0;
+  overflow: hidden;
 }
 
 .smoke span {
   position: absolute;
   display: block;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(77,80,83,0.15) 0%, rgba(29,32,35,0.05) 80%, transparent 100%);
-  border-radius: 50%;
-  filter: blur(30px);
-  animation: moveSmoke 16s linear infinite;
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, 
+    rgba(100, 100, 100, 0.15) 0%, 
+    rgba(80, 80, 80, 0.1) 30%, 
+    rgba(60, 60, 60, 0.05) 70%, 
+    transparent 100%);
+  filter: blur(3px);
+  animation: smokeRise infinite linear;
 }
 
 .smoke span:nth-child(1) {
-  left: 10vw;
-  top: 20vh;
+  left: 10%;
+  animation-duration: 20s;
   animation-delay: 0s;
-}
-.smoke span:nth-child(2) {
-  left: 60vw;
-  top: 10vh;
-  animation-delay: 4s;
-}
-.smoke span:nth-child(3) {
-  left: 30vw;
-  top: 60vh;
-  animation-delay: 8s;
-}
-.smoke span:nth-child(4) {
-  left: 70vw;
-  top: 70vh;
-  animation-delay: 12s;
+  width: 3px;
+  height: 120px;
 }
 
-@keyframes moveSmoke {
+.smoke span:nth-child(2) {
+  left: 25%;
+  animation-duration: 25s;
+  animation-delay: 3s;
+  width: 2px;
+  height: 90px;
+}
+
+.smoke span:nth-child(3) {
+  left: 40%;
+  animation-duration: 30s;
+  animation-delay: 7s;
+  width: 4px;
+  height: 110px;
+}
+
+.smoke span:nth-child(4) {
+  left: 60%;
+  animation-duration: 22s;
+  animation-delay: 12s;
+  width: 2px;
+  height: 95px;
+}
+
+.smoke span:nth-child(5) {
+  left: 75%;
+  animation-duration: 28s;
+  animation-delay: 5s;
+  width: 3px;
+  height: 105px;
+}
+
+.smoke span:nth-child(6) {
+  left: 85%;
+  animation-duration: 24s;
+  animation-delay: 10s;
+  width: 2px;
+  height: 85px;
+}
+
+@keyframes smokeRise {
   0% {
-    transform: translateY(0) scale(1);
-    opacity: 0.5;
+    transform: translateY(100vh) translateX(0) scale(0.8);
+    opacity: 0;
   }
-  50% {
-    transform: translateY(-40px) scale(1.1);
+  10% {
     opacity: 0.3;
   }
+  50% {
+    transform: translateY(50vh) translateX(20px) scale(1);
+    opacity: 0.2;
+  }
+  80% {
+    transform: translateY(20vh) translateX(-10px) scale(1.2);
+    opacity: 0.1;
+  }
   100% {
-    transform: translateY(0) scale(1);
-    opacity: 0.5;
+    transform: translateY(-20vh) translateX(30px) scale(1.5);
+    opacity: 0;
   }
 } 

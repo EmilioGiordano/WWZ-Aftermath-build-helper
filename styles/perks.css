@@ -1,0 +1,112 @@
+/* Perk Circle Styles */
+.perk-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.perk-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Red Perks - Class Perks */
+.perk-red {
+  background: radial-gradient(circle, #7f1d1d 0%, #450a0a 70%);
+  border-color: #dc2626;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(220, 38, 38, 0.3),
+    0 0 20px rgba(220, 38, 38, 0.2);
+}
+
+.perk-red:hover {
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    inset 0 2px 4px rgba(220, 38, 38, 0.4),
+    0 0 30px rgba(220, 38, 38, 0.4);
+}
+
+/* Gray Perks - General Perks */
+.perk-gray {
+  background: radial-gradient(circle, #4b5563 0%, #1f2937 70%);
+  border-color: #6b7280;
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 2px 4px rgba(107, 114, 128, 0.3),
+    0 0 15px rgba(107, 114, 128, 0.1);
+}
+
+.perk-gray:hover {
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.6),
+    inset 0 2px 4px rgba(107, 114, 128, 0.4),
+    0 0 25px rgba(107, 114, 128, 0.2);
+}
+
+/* Perk Icon Container */
+.perk-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Empty Perk Slots */
+.perk-empty {
+  width: 60px;
+  height: 60px;
+}
+
+/* Grid Container Adjustments */
+#perks-container {
+  padding: 20px;
+  background: transparent;
+  border: none;
+}
+
+/* Special Layout Adjustments for WWZ Style */
+.perk-circle::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.perk-circle:hover::before {
+  opacity: 1;
+}
+
+/* Bottom description area styling */
+#perk-description {
+  background: transparent;
+  border: none;
+  padding: 20px;
+}
+
+#perk-title {
+  color: #f9fafb;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#perk-text {
+  color: #d1d5db;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}

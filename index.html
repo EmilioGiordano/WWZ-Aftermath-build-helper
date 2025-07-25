@@ -3,35 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>World War Z - Classes</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/styles.css">
-
-    
 </head>
-<body class="flex flex-col items-center justify-center min-h-screen gap-8 bg-gray-900">
+<body class="min-h-screen bg-gray-900 text-white relative overflow-hidden">
   <div class="smoke">
     <span></span>
     <span></span>
     <span></span>
     <span></span>
+    <span></span>
+    <span></span>
   </div>
-  <div id="class-bar" class="flex justify-center items-center gap-8 mb-4">
-    <button class="class-btn" data-class="gunslinger">GUNSLINGER</button>
-    <button class="class-btn" data-class="hellraiser">HELLRAISER</button>
-    <button class="class-btn" data-class="medic">MEDIC</button>
-    <button class="class-btn" data-class="fixer">FIXER</button>
-    <button class="class-btn" data-class="slasher">SLASHER</button>
-    <button class="class-btn" data-class="exterminator">EXTERMINATOR</button>
-    <button class="class-btn" data-class="dronemaster">DRONEMASTER</button>
-    <button class="class-btn" data-class="vanguard">VANGUARD</button>
+
+  <!-- Top Header -->
+  <div class="flex justify-between items-center p-6 relative z-10">
+    <h1 class="text-4xl font-bold tracking-wider">CLASSES</h1>
+    <div class="flex items-center gap-4">
+      <!-- Icons placeholders for top right (excluding party elements as requested) -->
+    </div>
   </div>
-  <h1 class="text-white text-3xl font-bold mb-8">Perks de Exterminator</h1>
-  <div id="perks-container" class="grid gap-6" style="grid-template-columns: repeat(13, minmax(0, 1fr));"></div>
-  <div id="perk-description" class="mt-8 text-center min-h-[4.5rem] h-[4.5rem] flex flex-col items-center justify-center">
-    <div id="perk-title" class="text-2xl font-bold text-white"></div>
-    <div id="perk-text" class="text-lg text-gray-300"></div>
+
+  <!-- Main Content Container -->
+  <div class="flex flex-col items-center px-6 relative z-10">
+    
+    <!-- Class Navigation Bar -->
+    <div id="class-bar" class="flex justify-center items-center gap-2 mb-8">
+      <button class="class-btn" data-class="gunslinger">GUNSLINGER</button>
+      <button class="class-btn" data-class="hellraiser">HELLRAISER</button>
+      <button class="class-btn" data-class="medic">MEDIC</button>
+      <button class="class-btn" data-class="fixer">FIXER</button>
+      <button class="class-btn" data-class="slasher">SLASHER</button>
+      <button class="class-btn" data-class="exterminator">EXTERMINATOR</button>
+      <button class="class-btn" data-class="dronemaster">DRONEMASTER</button>
+      <button class="class-btn" data-class="vanguard">VANGUARD</button>
+    </div>
+
+    <!-- Perks Section -->
+    <div class="w-full max-w-7xl relative">
+      <!-- Player Level and Class Display -->
+      <div class="flex items-center gap-4 mb-6">
+        <div class="flex items-center gap-2">
+          <span class="bg-yellow-500 text-black px-2 py-1 rounded text-sm font-bold">10</span>
+          <span class="bg-gray-600 text-white px-2 py-1 rounded text-sm">30</span>
+        </div>
+        <h2 id="class-title" class="text-2xl font-bold uppercase tracking-wider">EXTERMINATOR</h2>
+      </div>
+
+      <!-- Perks Grid -->
+      <div id="perks-container" class="grid gap-4 justify-center" style="grid-template-columns: repeat(13, 60px); grid-template-rows: repeat(4, 60px);"></div>
+    </div>
+
+    <!-- Bottom Description Area -->
+    <div class="mt-12 w-full max-w-4xl">
+      <div id="perk-description" class="text-center min-h-[120px] flex flex-col items-center justify-center">
+        <div id="perk-title" class="text-2xl font-bold text-white mb-2"></div>
+        <div id="perk-text" class="text-base text-gray-300 max-w-2xl leading-relaxed"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Left ESC Button -->
+  <div class="absolute bottom-6 left-6 z-10">
+    <button class="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+      <span class="text-sm">ESC</span>
+      <span class="text-sm">BACK</span>
+    </button>
   </div>
 
   <script src="script.js"></script>
