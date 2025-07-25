@@ -1,388 +1,340 @@
 {
   "exterminator": [
     {
-      "name" : "perk 1",
-      "description" : "description 1",
-      "image" : "ruta",
-      "column" : 1,
-      "row" : 1,
-      "type" : "red"
+      "name": "Firestarter",
+      "description": "Start with Molotov and Shotgun. You deal 25% more damage during swarm attacks",
+      "column": 1,
+      "row": 1,
+      "type": "red"
     },
     {
-      "name" : "perk 2",
-      "description" : "description 2",
-      "image" : "ruta",
-      "column" : 1,
-      "row" : 2,
-      "type" : "red"
+      "name": "Pyromaniac",
+      "description": "Molotov's fire damage increased by 50%",
+      "column": 2,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 3",
-      "description" : "description 3",
-      "image" : "ruta",
-      "column" : 1,
-      "row" : 3,
-      "type" : "red"
+      "name": "Hangover",
+      "description": "Molotovs burn 75% longer",
+      "column": 2,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 4",
-      "description" : "description 4",
-      "image" : "ruta",
-      "column" : 2,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Crowd Control",
+      "description": "Push radius from melee attacks increased by 50%",
+      "column": 2,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 5",
-      "description" : "description 5",
-      "image" : "ruta",
-      "column" : 2,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Minefield",
+      "description": "The maximum number of Claymores is increased by 1, but they can kill 15% fewer targets. Start with a Claymore",
+      "column": 2,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 6",
-      "description" : "description 6",
-      "image" : "ruta",
-      "column" : 2,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Rage Mode",
+      "description": "When pinned down by usual or special zombies you will automatically rise up and push your attackers back (cooldown 300 seconds)",
+      "column": 3,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 7",
-      "description" : "description 7",
-      "image" : "ruta",
-      "column" : 2,
-      "row" : 4,
-      "type" : "gray"
+      "name": "All Elbows",
+      "description": "Movement speed penalty when zombies are very close reduced by 100%",
+      "column": 3,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 8",
-      "description" : "description 8",
-      "image" : "ruta",
-      "column" : 3,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Rooted",
+      "description": "You can never be pinned down by usual zombies (does not affect special zombies)",
+      "column": 3,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 9",
-      "description" : "description 9",
-      "image" : "ruta",
-      "column" : 3,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Stop, drop, and roll",
+      "description": "When you become incapacitated, you ignite enemies around you",
+      "column": 3,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 10",
-      "description" : "description 10",
-      "image" : "ruta",
-      "column" : 3,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Dragon Hide",
+      "description": "Fire resistance increased by 100%",
+      "column": 4,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 11",
-      "description" : "description 11",
-      "image" : "ruta",
-      "column" : 3,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Heavy Metal",
+      "description": "Start with improved RPGL4 that deals 100% more damage. All RPGL4 pickups for you also improved",
+      "column": 4,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 12",
-      "description" : "description 12",
-      "image" : "ruta",
-      "column" : 4,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Heavy Metal II",
+      "description": "Start with improved Taiga-12 Heavy Assault Shotgun that deals 25% more damage, and has 25% more ammo. All Taiga-12 Heavy Assault Shotgun pickups for you also improved",
+      "column": 4,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 13",
-      "description" : "description 13",
-      "image" : "ruta",
-      "column" : 4,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Big Bang",
+      "description": "Start with an improved Multi-shot Rocket Launcher that kills 50% more zombies. All MRL202 Commando pickups for you are also improved",
+      "column": 4,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 14",
-      "description" : "description 14",
-      "image" : "ruta",
-      "column" : 4,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Bandolier",
+      "description": "Mortar and Stationary machinegun ammo capacity increased by 25% for all team. Durability of defenses increased by 25% for all team",
+      "column": 5,
+      "row": 1,
+      "type": "red"
     },
     {
-      "name" : "perk 15",
-      "description" : "description 15",
-      "image" : "ruta",
-      "column" : 4,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Deep Pockets",
+      "description": "Carried ammo capacity for primary and secondary weapons increased by 25%",
+      "column": 6,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 16",
-      "description" : "description 16",
-      "image" : "ruta",
-      "column" : 5,
-      "row" : 1,
-      "type" : "red"
+      "name": "Wheatgrass",
+      "description": "Health increased by 25%",
+      "column": 6,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 17",
-      "description" : "description 17",
-      "image" : "ruta",
-      "column" : 5,
-      "row" : 2,
-      "type" : "red"
+      "name": "Rifleman",
+      "description": "Start with ARK-103 Assault Rifle",
+      "column": 6,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 18",
-      "description" : "description 18",
-      "image" : "ruta",
-      "column" : 5,
-      "row" : 3,
-      "type" : "red"
+      "name": "S890",
+      "description": "Start with an S890 Combat Shotgun",
+      "column": 6,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 19",
-      "description" : "description 19",
-      "image" : "ruta",
-      "column" : 6,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Green Fingered",
+      "description": "Your Claymores are rigged to explode only when there are at least 5 targets in the blast area. Start with Claymore",
+      "column": 7,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 20",
-      "description" : "description 20",
-      "image" : "ruta",
-      "column" : 6,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Fire Trap",
+      "description": "Claymore explosions set fire to surrounding area. Start with Claymore",
+      "column": 7,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 21",
-      "description" : "description 21",
-      "image" : "ruta",
-      "column" : 6,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Combat Engineer",
+      "description": "20% chance to restore an expended Defense Kit. (10% for Horde Mode)",
+      "column": 7,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 22",
-      "description" : "description 22",
-      "image" : "ruta",
-      "column" : 6,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Burnout",
+      "description": "During swarm attacks, fire damage is increased by 25%",
+      "column": 7,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 23",
-      "description" : "description 23",
-      "image" : "ruta",
-      "column" : 7,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Second Wind",
+      "description": "Instead of becoming incapacitated you will regain 25% health and keep going (cooldown 120 seconds)",
+      "column": 8,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 24",
-      "description" : "description 24",
-      "image" : "ruta",
-      "column" : 7,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Job Satisfaction",
+      "description": "Killing 15 zombies in rapid succession grants temporary health boost (cooldown 30 seconds)",
+      "column": 8,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 25",
-      "description" : "description 25",
-      "image" : "ruta",
-      "column" : 7,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Cloak and Dagger",
+      "description": "Killing 15 zombies in rapid succession grants masking effect for 3 seconds",
+      "column": 8,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 26",
-      "description" : "description 26",
-      "image" : "ruta",
-      "column" : 7,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Heavy bone",
+      "description": "There is a chance that killing a special zombie will cause it to drop an MRL202 Commando (cooldown: 120 seconds)",
+      "column": 8,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 27",
-      "description" : "description 27",
-      "image" : "ruta",
-      "column" : 8,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Hollywood II",
+      "description": "Explosives and fire damage dealt to yourself and your teammates reduced by 50%",
+      "column": 9,
+      "row": 1,
+      "type": "red"
     },
     {
-      "name" : "perk 28",
-      "description" : "description 28",
-      "image" : "ruta",
-      "column" : 8,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Broad Shoulders",
+      "description": "Heavy weapon ammo capacity increased by 25%",
+      "column": 10,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 29",
-      "description" : "description 29",
-      "image" : "ruta",
-      "column" : 8,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Bullet Rain",
+      "description": "All fully automatic weapons' reload speed increased by 25%",
+      "column": 10,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 30",
-      "description" : "description 30",
-      "image" : "ruta",
-      "column" : 8,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Third Hand",
+      "description": "Killing 15 zombies in rapid succession instantly reloads your primary weapon",
+      "column": 10,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 31",
-      "description" : "description 31",
-      "image" : "ruta",
-      "column" : 9,
-      "row" : 1,
-      "type" : "red"
+      "name": "Nimble fingers",
+      "description": "Shotgun reload speed is increased by 25%",
+      "column": 10,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 32",
-      "description" : "description 32",
-      "image" : "ruta",
-      "column" : 9,
-      "row" : 2,
-      "type" : "red"
+      "name": "Party at my Place",
+      "description": "Maximum Molotov capacity increased to 3 and Claymore capacity to 4",
+      "column": 11,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 33",
-      "description" : "description 33",
-      "image" : "ruta",
-      "column" : 9,
-      "row" : 3,
-      "type" : "red"
+      "name": "Pickpocket",
+      "description": "Killing 15 zombies in rapid succession refills one equipment charge (cooldown 60 seconds)",
+      "column": 11,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 34",
-      "description" : "description 34",
-      "image" : "ruta",
-      "column" : 10,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Pocket Factory",
+      "description": "You won't be able to pick equipment bags on the mission but your equipment will be constantly regenerating (150 seconds to replenish to maximum)",
+      "column": 11,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 35",
-      "description" : "description 35",
-      "image" : "ruta",
-      "column" : 10,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Impromptu",
+      "description": "Special zombies are stunned by the Molotov's splash",
+      "column": 11,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 36",
-      "description" : "description 36",
-      "image" : "ruta",
-      "column" : 10,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Know-How",
+      "description": "Molotovs and Claymores can kill 25% more targets",
+      "column": 12,
+      "row": 1,
+      "type": "gray"
     },
     {
-      "name" : "perk 37",
-      "description" : "description 37",
-      "image" : "ruta",
-      "column" : 10,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Hot Sauce",
+      "description": "Molotov's splash damage increased by 100%",
+      "column": 12,
+      "row": 2,
+      "type": "gray"
     },
     {
-      "name" : "perk 38",
-      "description" : "description 38",
-      "image" : "ruta",
-      "column" : 11,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Ghost",
+      "description": "Automatically receive masking effect if you are the last of your team still standing (does not apply if you are incapacitated or pinned)",
+      "column": 12,
+      "row": 3,
+      "type": "gray"
     },
     {
-      "name" : "perk 39",
-      "description" : "description 39",
-      "image" : "ruta",
-      "column" : 11,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Heavy stride",
+      "description": "Claymore mines explode twice with a delay of 5 seconds, but each explosion can kill 15% fewer targets. Start with a Claymore",
+      "column": 12,
+      "row": 4,
+      "type": "gray"
     },
     {
-      "name" : "perk 40",
-      "description" : "description 40",
-      "image" : "ruta",
-      "column" : 11,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Daredevil",
+      "description": "When there are more than 30 zombies in the area, firearm damage is increased by 25% and number of melee strikes before becoming fatigued increased by 2",
+      "column": 13,
+      "row": 1,
+      "type": "red"
     },
     {
-      "name" : "perk 41",
-      "description" : "description 41",
-      "image" : "ruta",
-      "column" : 11,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Wheatgrass II",
+      "description": "Health increased by 5%",
+      "column": 1,
+      "row": 2,
+      "type": "red"
     },
     {
-      "name" : "perk 42",
-      "description" : "description 42",
-      "image" : "ruta",
-      "column" : 12,
-      "row" : 1,
-      "type" : "gray"
+      "name": "Bullet Rain II",
+      "description": "Shotgun and semi automatic weapons reload speed increased by 10%",
+      "column": 5,
+      "row": 2,
+      "type": "red"
     },
     {
-      "name" : "perk 43",
-      "description" : "description 43",
-      "image" : "ruta",
-      "column" : 12,
-      "row" : 2,
-      "type" : "gray"
+      "name": "Know-How II",
+      "description": "Molotovs and Claymores can kill 10% more targets",
+      "column": 9,
+      "row": 2,
+      "type": "red"
     },
     {
-      "name" : "perk 44",
-      "description" : "description 44",
-      "image" : "ruta",
-      "column" : 12,
-      "row" : 3,
-      "type" : "gray"
+      "name": "Deep Pockets II",
+      "description": "Carried ammo capacity for primary weapons increased by 10%",
+      "column": 13,
+      "row": 2,
+      "type": "red"
     },
     {
-      "name" : "perk 45",
-      "description" : "description 45",
-      "image" : "ruta",
-      "column" : 12,
-      "row" : 4,
-      "type" : "gray"
+      "name": "Dragon Hide II",
+      "description": "Fire resistance for you and your team is increased by 10%",
+      "column": 1,
+      "row": 3,
+      "type": "red"
     },
     {
-      "name" : "perk 46",
-      "description" : "description 46",
-      "image" : "ruta",
-      "column" : 13,
-      "row" : 1,
-      "type" : "red"
+      "name": "Roseship",
+      "description": "Barbed wire can kill 10% more targets for the whole team",
+      "column": 5,
+      "row": 3,
+      "type": "red"
     },
     {
-      "name" : "perk 47",
-      "description" : "description 47",
-      "image" : "ruta",
-      "column" : 13,
-      "row" : 2,
-      "type" : "red"
+      "name": "Oily hands",
+      "description": "Molotov throw distance is increased by 25%",
+      "column": 9,
+      "row": 3,
+      "type": "red"
     },
     {
-      "name" : "perk 48",
-      "description" : "description 48",
-      "image" : "ruta",
-      "column" : 13,
-      "row" : 3,
-      "type" : "red"
+      "name": "Bandolier II",
+      "description": "All defense kits you install can kill 10% more targets and have 10% more ammo capacity",
+      "column": 13,
+      "row": 3,
+      "type": "red"
     }
   ]
 }
