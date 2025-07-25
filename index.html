@@ -6,8 +6,8 @@
     <title>Document</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="background.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles/styles.css">
+    
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen gap-8 bg-gray-900">
   <div class="smoke">
@@ -16,6 +16,17 @@
     <span></span>
     <span></span>
   </div>
+  <select id="class-selector" class="mb-4 p-2 rounded">
+    <option value="gunslinger">Gunslinger</option>
+    <option value="hellraiser">Hellraiser</option>
+    <option value="medic">Medic</option>
+    <option value="fixer">Fixer</option>
+    <option value="slasher">Slasher</option>
+    <option value="exterminator">Exterminator</option>
+    <option value="dronemaster">Dronemaster</option>
+    <option value="vanguard">Vanguard</option>
+    <!-- Puedes agregar más clases aquí -->
+  </select>
   <h1 class="text-white text-3xl font-bold mb-8">Perks de Exterminator</h1>
   <div id="perks-container" class="grid gap-6" style="grid-template-columns: repeat(13, minmax(0, 1fr));"></div>
   <div id="perk-description" class="mt-8 text-center min-h-[4.5rem] h-[4.5rem] flex flex-col items-center justify-center">
@@ -23,5 +34,8 @@
     <div id="perk-text" class="text-lg text-gray-300"></div>
   </div>
 
+  <script src="script.js"></script>
 </body>
+
+
 </html>
