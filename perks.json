@@ -1,4 +1,1018 @@
 {
+  "gunslinger": [
+    {
+      "name": "Gimme a Reason",
+      "description": "Start with Frag Grenade and Compact SMG. Movement has no effect on weapon accuracy, recoil effect also reduced",
+      "column": 1,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Fire in the Hole",
+      "description": "Frag Grenade can kill 25% more targets (base: 14)",
+      "column": 2,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Impact Grenades",
+      "description": "Frag Grenades explode on impact. They deal 100% more damage but have 50% smaller explosion radius",
+      "column": 2,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Power Nap",
+      "description": "Unequipped weapon automatically reloads after 7 seconds",
+      "column": 2,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Special mag",
+      "description": "Killing an enemy with a grenade increases penetration of all weapons by 1 for 5 seconds",
+      "column": 2,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Swapping Mags!",
+      "description": "Reload speed increased by 25% on all weapons",
+      "column": 3,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Front Line Supply",
+      "description": "Headshots made with primary or secondary weapons automatically restore 5% rounds to the magazine",
+      "column": 3,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Adrenaline",
+      "description": "Reloading a weapon with less than 25% ammo in the magazine provides a 50% reload speed boost for 5 seconds",
+      "column": 3,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Refilling",
+      "description": "Reloading a fully unloaded primary weapon increases its next magazine's capacity by 15%",
+      "column": 3,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Heavy Metal",
+      "description": "Start with improved MAG5 Machinegun that deals 50% more damage, and has 50% more ammo. All MAG5 machinegun pickups also improved",
+      "column": 4,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Gunner",
+      "description": "Start with Sporting Carbine PAC-15",
+      "column": 4,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "This is My Rifle",
+      "description": "Start with ARK-103 Assault Rifle",
+      "column": 4,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "S890",
+      "description": "Start with an S890 Combat Shotgun",
+      "column": 4,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Seek and Destroy",
+      "description": "All active special zombies within a radius of 20 meters will be automatically marked",
+      "column": 5,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Bounty Hunter",
+      "description": "Deal 25% more damage to special zombies",
+      "column": 6,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Wheatgrass",
+      "description": "Health increased by 25%",
+      "column": 6,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Sleight of Hand",
+      "description": "Switch weapons 150% faster",
+      "column": 6,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Sort it all out",
+      "description": "Emptying the magazine of the primary weapon loads the secondary weapon with explosive rounds",
+      "column": 6,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Gun Fanatic",
+      "description": "Draining primary and secondary weapons' magazines automatically reloads primary weapon",
+      "column": 7,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Concentration",
+      "description": "Killing 5 zombies consecutively with only headshots grants temporary health boost (cooldown 30 seconds)",
+      "column": 7,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Judo",
+      "description": "When pinned down by usual or special zombies you will automatically rise up and push your attackers back (cooldown 180 seconds)",
+      "column": 7,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Encore",
+      "description": "Instead of becoming incapacitated, you gain a 75% temporary health boost and keep going (cooldown: 180 seconds)",
+      "column": 7,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Welcoming Committee",
+      "description": "Stationary machinegun ammo increased by 25% for all teammates",
+      "column": 8,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "S890 Shorty",
+      "description": "Start with a S890 Shorty in your secondary weapon slot",
+      "column": 8,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Senjata",
+      "description": "Start with a Senjata PDW in your secondary weapon slot",
+      "column": 8,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Bad odor",
+      "description": "There is a chance that killing a special zombie will cause it to drop a primary weapon (cooldown: 180 seconds)",
+      "column": 8,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "My Bad",
+      "description": "Deal 50% less friendly fire damage to your teammates",
+      "column": 9,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Deep Pockets",
+      "description": "Carried ammo capacity for primary and secondary weapons increased by 25%",
+      "column": 10,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Action Hero",
+      "description": "When you become the last of your team still standing you gain ability to shoot with your primary and secondary weapons without spending rounds in its magazines for 7 seconds",
+      "column": 10,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Free Refill",
+      "description": "Restore 3% of primary weapon ammo for each kill made with equipment",
+      "column": 10,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "The more the merrier",
+      "description": "Carried ammo capacity for primary and secondary weapons is increased by 5% for the entire team",
+      "column": 10,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Work Belt",
+      "description": "Max number of Frag Grenades increased to 3",
+      "column": 11,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Pocket Factory",
+      "description": "You won't be able to pick equipment bags on the mission, but your equipment will be constantly regenerating (150 seconds to replenish to maximum)",
+      "column": 11,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Headhunter Reward",
+      "description": "Killing 5 zombies consecutively with only headshots refills one equipment charge (cooldown 15 seconds)",
+      "column": 11,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "It's not over",
+      "description": "Infinite equipment slot usage for 10 seconds when you become the last member of your team still standing. Your equipment charges get fully restored (cooldown: 180 seconds)",
+      "column": 11,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Annihilator",
+      "description": "Primary, secondary and heavy weapons deal 15% more damage.",
+      "column": 12,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Switcheroo",
+      "description": "Switching to primary or secondary weapons increases firearm damage by 50% for 5 seconds",
+      "column": 12,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Thrifty",
+      "description": "Reloading a weapon with less than 25% ammo in the magazine provides a 50% firearm damage boost for 3 seconds",
+      "column": 12,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "I'm not alone",
+      "description": "Firearm damage increased by 10% for the whole team",
+      "column": 12,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "War Face",
+      "description": "Killing 25 zombies in rapid succession grants 50% firearm damage boost to entire team for 20 seconds",
+      "column": 13,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Swapping Mags II",
+      "description": "Reload speed increased by 10% on primary weapons",
+      "column": 1,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Swapping Mags III",
+      "description": "Reload speed increased by 15% on secondary weapons",
+      "column": 5,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Deep Pockets II",
+      "description": "Carried ammo capacity for primary and secondary weapons increased by 10%",
+      "column": 9,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Fire in The Hole II",
+      "description": "Frag Grenade can kill 20% more targets (base: 14)",
+      "column": 13,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "My Bad II",
+      "description": "Take 10% less friendly fire damage",
+      "column": 1,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "I won't budge from this spot!",
+      "description": "Fully depleting the ammo of a Stationary Machine Gun results in a 10% chance (5% for the Horde mode) to receive a new one",
+      "column": 5,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "Hold the line!",
+      "description": "The recoil of primary and secondary weapons is reduced by 10%",
+      "column": 9,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "Sleight of Hand",
+      "description": "Switch weapons 25% faster (the bonus is stackable but can't be higher than 150%)",
+      "column": 13,
+      "row": 3,
+      "type": "red"
+    }
+  ],
+  "hellraiser": [
+    {
+      "name": "Demoman",
+      "description": "Start with C4, Shotgun and Hailstorm MGL",
+      "column": 1,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Throwing arm",
+      "description": "Throw distance of a C4 increased by 50%",
+      "column": 2,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Here Kitty",
+      "description": "C4 will attract zombies for 5 seconds after being planted but can kill 35% less targets (base: 14)",
+      "column": 2,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Not Today",
+      "description": "You may become incapacitated 1 additional time before dying",
+      "column": 2,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "The perfect composition",
+      "description": "The explosion radius of C4 and Claymores is increased by 25%",
+      "column": 2,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Welcome Mat",
+      "description": "Upon trigger Claymores will attract zombies for 3 seconds before explosion. Start with Claymores",
+      "column": 3,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Green Fingered",
+      "description": "Planting speed of Claymores is increased by 50%. 25% chance to plant the Claymore at no cost to your equipment. Start with Claymores",
+      "column": 3,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Welcoming Committee",
+      "description": "Any mortar used by you or teammates can kill 25% more targets (base: 40)",
+      "column": 3,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Impact grenades",
+      "description": "Projectiles fired from the Hailstorm MGL explode upon contact",
+      "column": 3,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Unshakeable",
+      "description": "Self-inflicted explosive damage reduced by 100%",
+      "column": 4,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Directed Blast",
+      "description": "You deal 100% more damage to zombies with all explosives",
+      "column": 4,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Nimble Thumbs",
+      "description": "All shotguns' reload speed increased by 50%",
+      "column": 4,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "You've worn me out",
+      "description": "Killing enemies with equipment restores 2 grenades for the Hailstorm MGL",
+      "column": 4,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Demolition Squad",
+      "description": "Explosive equipment can kill 25% more targets. Applies for the whole team",
+      "column": 5,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Bounty Hunter",
+      "description": "Deal 25% more damage to special zombies",
+      "column": 6,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Wheatgrass",
+      "description": "Health increased by 25%",
+      "column": 6,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Walk Softly",
+      "description": "Start with a S890 shotgun",
+      "column": 6,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Smells like gunpowder",
+      "description": "All Hailstorm MGLs within 10 meters will be automatically marked if you don't have a heavy weapon",
+      "column": 6,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Tooled Up",
+      "description": "Increase Claymore capacity to 4 and C4 capacity to 3",
+      "column": 7,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Pickpocket",
+      "description": "Killing 15 zombies in rapid succession refills one equipment charge (cooldown 60 seconds)",
+      "column": 7,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "I'll Take That",
+      "description": "Killing a special zombie restores one equipment charge (cooldown 60 seconds)",
+      "column": 7,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Shrapnel",
+      "description": "All your explosives can kill 10% more targets",
+      "column": 7,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Free Refill I",
+      "description": "Restores 1% of primary weapon ammo for each kill made with equipment",
+      "column": 8,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Free Refill II",
+      "description": "Each kill made with equipment restores 1 round to your primary weapon magazine",
+      "column": 8,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Third Hand",
+      "description": "Killing 15 zombies in rapid succession instantly reloads your primary weapon",
+      "column": 8,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Free Refill III",
+      "description": "There is a chance that killing a special zombie will cause it to drop a Hailstorm MGL (cooldown: 180 seconds)",
+      "column": 8,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Hollywood",
+      "description": "Explosive and fire damage dealt to yourself and your teammates reduced by 30%",
+      "column": 9,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Scorched Earth",
+      "description": "Claymore and C4 explosions will set the nearby area on fire",
+      "column": 10,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Deep Pockets",
+      "description": "Carried ammo capacity for heavy weapon increased by 35%",
+      "column": 10,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Hole Punch",
+      "description": "Shotgun range increased by 50%",
+      "column": 10,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Alert red!",
+      "description": "C4 explosions also release a gas cloud that hurts zombies",
+      "column": 10,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Senjata",
+      "description": "Start with a Senjata PDW in your secondary weapon slot",
+      "column": 11,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Thumper",
+      "description": "Start with a Thumper GL in your secondary weapon slot",
+      "column": 11,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Heavy Rain",
+      "description": "Start with improved Hailstorm MGL that does 50% more damage, and has 50% more ammo. All Hailstorm MGL pickups for you also improved [base: 8 ammo]",
+      "column": 11,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Ride of the Valkyries",
+      "description": "Start with an improved Multi-shot Rocket Launcher that kills 50% more zombies. All MRL202 Commando pickups for you are also improved [base: 4 ammo]",
+      "column": 11,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Knock Knock",
+      "description": "Start with a Breaching Charge",
+      "column": 12,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Job Satisfaction",
+      "description": "Killing 15 zombies in rapid succession grants a temporary health boost",
+      "column": 12,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Predator",
+      "description": "Killing special zombies boosts firearm damage by 50% for 10 seconds",
+      "column": 12,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "All around is ashes",
+      "description": "The Thumper GL deals 25% increased damage",
+      "column": 12,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Technician",
+      "description": "C4, Claymore Landmines and MGL can kill 25% more targets",
+      "column": 13,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Throwing Arm II",
+      "description": "Throw distance of a C4 increased by 25%",
+      "column": 1,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Sleight of Hand",
+      "description": "Switch weapons 25% faster",
+      "column": 5,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Directed Blast II",
+      "description": "Your explosives can kill 10% more targets",
+      "column": 9,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Thumper II",
+      "description": "Carried ammo capacity for Thumper GL increased by 1",
+      "column": 13,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Hole Punch II",
+      "description": "A 50% range increase for pistols and secondary SMGs",
+      "column": 1,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "Blink of an eye",
+      "description": "The reload speed of secondary weapons is increased by 15%",
+      "column": 5,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "Knock Knock II",
+      "description": "10% chance of using a Breaching Charge without spending it",
+      "column": 9,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "Directed Blast III",
+      "description": "Your explosives can kill 5% more targets",
+      "column": 13,
+      "row": 3,
+      "type": "red"
+    }
+  ],
+  "fixer": [
+    {
+      "name": "Mule",
+      "description": "Start with a Supply Bag and Scout Rifle. Increase carried ammo capacity for primary and secondary weapons by 10% for all teammates",
+      "column": 1,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Kickback",
+      "description": "When a teammate uses your Supply Bag there is a 20% chance you will also gain explosive ammo",
+      "column": 2,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Armory",
+      "description": "Using a Supply Bag gives a 20% chance to restore one equipment charge. But the bag owner can only restore his equipment when someone else gains this benefit from his bag",
+      "column": 2,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Stand by Me",
+      "description": "Increases firearm damage by 100% for 10 seconds when reviving or unpinning a teammate",
+      "column": 2,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "It might work",
+      "description": "You can restore a depleted automatic turret with a 20% chance (10% for the Horde mode)",
+      "column": 2,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Night Owl",
+      "description": "Masking Grenades grant an additional temporary health boost. Start with Masking Grenades",
+      "column": 3,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Side Effects",
+      "description": "Masking Grenade gas is lethal to zombies. Start with Masking Grenades",
+      "column": 3,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Give 'em Hell",
+      "description": "Reviving a teammate grants explosive ammo for both of you",
+      "column": 3,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "No need for instructions",
+      "description": "Automatic turrets placed by you and your allies deal 25% more damage",
+      "column": 3,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Knock Knock",
+      "description": "You start with a Breaching Charge",
+      "column": 4,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Paramedic",
+      "description": "Revive speed increased by 100%",
+      "column": 4,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Cloakroom",
+      "description": "Reviving a teammate grants masking effect for 3 seconds for both of you",
+      "column": 4,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Cheer up",
+      "description": "Reviving a teammate refills one equipment charge for both of you",
+      "column": 4,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Please Stand Up",
+      "description": "If everyone in a team is incapacitated or pinned by a zombie then the Fixer is able to stand up (cooldown 60 seconds)",
+      "column": 5,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "My Round I",
+      "description": "Increase carried ammo capacity for primary and secondary weapons by 10% for you and all teammates",
+      "column": 6,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Wheatgrass",
+      "description": "Health increased by 25%",
+      "column": 6,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Gunner",
+      "description": "Start with Sporting Carbine Pac-15",
+      "column": 6,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Scrap metal... again",
+      "description": "All equipment bags within 20 meters will be automatically marked if you have no equipment charges",
+      "column": 6,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "One for the Road",
+      "description": "Max Masking Grenade and Supply Bag capacity increased to 2. However Masking Grenade effect duration decreased by 3 seconds and Supply Bag contains 25% less explosive ammo",
+      "column": 7,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Pickpocket",
+      "description": "Kill 15 zombies in rapid succession refills one equipment charge (cooldown 90 seconds)",
+      "column": 7,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Scavenger",
+      "description": "Killing special zombie restores one equipment charge (cooldown 90 seconds)",
+      "column": 7,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "I am not a snack",
+      "description": "There is a chance that killing a special zombie will cause it to drop an equipment bag (cooldown: 180 seconds)",
+      "column": 7,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Instant Replay",
+      "description": "Anyone that uses your supply bag restores 20% of their primary weapon ammunition (base 10%)",
+      "column": 8,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Under the Table",
+      "description": "Anyone entering Masking Grenade gas cloud restores 10% of primary weapon ammo",
+      "column": 8,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Go Get 'Em",
+      "description": "Reviving a teammate will restore 25% of primary weapon's ammunition for you and your teammate",
+      "column": 8,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Almost missed",
+      "description": "Damage to marked enemies is increased by 10% for you and your team",
+      "column": 8,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Efficiency",
+      "description": "Supply bag contains 25% more explosive ammo. Masking grenade effect duration increased by 2 seconds",
+      "column": 9,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Lightning Hands",
+      "description": "All semi automatic rifles' reload speed increased by 25%",
+      "column": 10,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Power Shot",
+      "description": "All semi automatic rifles gain increased penetration",
+      "column": 10,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Casull 6",
+      "description": "Start with a Casull 6 in your secondary weapon slot",
+      "column": 10,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "It Ain't Much but...",
+      "description": "The first 5% of ammo in the primary weapon's magazine will be explosive for the entire team",
+      "column": 10,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Fourth of July",
+      "description": "Your Supply Bag can be used 1 more time(s) before depleting (base 4 uses)",
+      "column": 11,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Shadow Walker",
+      "description": "Masking Grenade effect duration increased by 2 seconds (base 6 seconds)",
+      "column": 11,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "Darkness Falls",
+      "description": "Masking Grenade gas cloud duration is increased by 7 seconds (base 5 seconds)",
+      "column": 11,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "Hidden pocket",
+      "description": "Using a Supply Bag additionally restores the secondary weapon's ammunition",
+      "column": 11,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "My Round II",
+      "description": "Increase carried ammo capacity for heavy weapons by 10% for all teammates",
+      "column": 12,
+      "row": 1,
+      "type": "gray"
+    },
+    {
+      "name": "Bandolier",
+      "description": "Mortar and Stationary machinegun ammo capacity increased by 25% for all team. Durability of defenses increased by 25% for all team [base: 4 Mortar ammo 200 machinegun ammo]",
+      "column": 12,
+      "row": 2,
+      "type": "gray"
+    },
+    {
+      "name": "The Big Five 0",
+      "description": "Start with improved BF25 Payload Rifle that deals 50% more damage and has 50% more ammo. All BF25 Payload Rifle pickups for you also improved [base: 6 ammo]",
+      "column": 12,
+      "row": 3,
+      "type": "gray"
+    },
+    {
+      "name": "3 in 1",
+      "description": "The first use of a placed Supply Bag will restore 10% health to you and your allies but its total usage number is reduced by 1",
+      "column": 12,
+      "row": 4,
+      "type": "gray"
+    },
+    {
+      "name": "Corporate Power Nap",
+      "description": "Unequipped weapon automatically reloads every 10 seconds for all teammates",
+      "column": 13,
+      "row": 1,
+      "type": "red"
+    },
+    {
+      "name": "Knock Knock II",
+      "description": "10% chance of using Breaching Charge without spending it",
+      "column": 1,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Paramedic II",
+      "description": "Revive speed increased by 25%",
+      "column": 5,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "My Round III",
+      "description": "Carried ammo capacity increased for primary and secondary weapons by 5% for you and all teammates",
+      "column": 9,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Bounty Hunter",
+      "description": "Deal 10% more damage to special zombies",
+      "column": 13,
+      "row": 2,
+      "type": "red"
+    },
+    {
+      "name": "Go Get 'Em II",
+      "description": "Reviving a teammate will restore 10% of the primary weapon's ammunition for you and your teammate",
+      "column": 1,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "I made it myself!",
+      "description": "Autoturret ammunition is increased by 10% for the whole team",
+      "column": 5,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "Kevlar",
+      "description": "After reviving an ally both of you take 25% less damage for 5 seconds",
+      "column": 9,
+      "row": 3,
+      "type": "red"
+    },
+    {
+      "name": "Sleight of Hand",
+      "description": "Switch weapons 25% faster",
+      "column": 13,
+      "row": 3,
+      "type": "red"
+    }
+  ],
   "exterminator": [
     {
       "name": "Firestarter",
