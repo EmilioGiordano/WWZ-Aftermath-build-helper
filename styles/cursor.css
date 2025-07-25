@@ -1,3 +1,11 @@
-body {
-    cursor: url('cursor.png'), auto;
-  }
+* {
+  cursor: url('../img/cursor.png'), auto !important;
+}
+
+select, option {
+  cursor: url('../img/cursor.png'), auto !important;
+}
+
+select:hover, select:focus, option:hover {
+  cursor: url('../img/cursor.png'), auto !important;
+}
