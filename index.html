@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World War Z - Classes</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/app-logo.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="styles/styles.css">
+    
 </head>
 <body class="min-h-screen bg-gray-900 text-white relative overflow-hidden">
   <div class="smoke">
@@ -18,32 +21,6 @@
     <span></span>
   </div>
 
-  <!-- Sidebar -->
-  <div id="sidebar" class="sidebar">
-    <div class="sidebar-header">
-      <button id="sidebar-toggle" class="sidebar-toggle">
-        <svg class="toggle-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 12h18M3 6h18M3 18h18"/>
-        </svg>
-      </button>
-    </div>
-    
-    <div class="sidebar-content">
-      <!-- Contenido de la sidebar irá aquí -->
-    </div>
-    
-    <div class="sidebar-footer">
-      <div class="user-profile">
-        <div class="user-avatar">
-          <span class="user-initial">M</span>
-        </div>
-        <div class="user-info">
-          <span class="user-name">Mario</span>
-          <span class="user-plan">Plan Pro</span>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Top Header -->
   <div class="flex justify-between items-center p-6 relative z-10">
@@ -66,6 +43,7 @@
       <button class="class-btn" data-class="exterminator">EXTERMINATOR</button>
       <button class="class-btn" data-class="dronemaster">DRONEMASTER</button>
       <button class="class-btn" data-class="vanguard">VANGUARD</button>
+      
     </div>
 
     <!-- Perks Section -->
@@ -101,8 +79,8 @@
     </button>
   </div>
 
-  <script src="scripts/builds.js"></script>
   <script src="scripts/script.js"></script>
+  <script src="scripts/sidebar.js"></script>
   <script src="scripts/sidebar.js"></script>
 </body>
 </html>
