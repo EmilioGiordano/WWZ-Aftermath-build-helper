@@ -2,6 +2,8 @@ const selector = document.getElementById('class-selector');
 const container = document.getElementById('perks-container');
 const titleDiv = document.getElementById('perk-title');
 const textDiv = document.getElementById('perk-text');
+const classButtons = document.querySelectorAll('.class-btn');
+let selectedClass = 'exterminator'; // Por defecto
 
 function renderPerks(className) {
   fetch('perks.json')
@@ -45,10 +47,26 @@ function renderPerks(className) {
     });
 }
 
-// Evento para cambiar de clase
-selector.addEventListener('change', (e) => {
-  renderPerks(e.target.value);
+function updateSelectedButton(className) {
+  classButtons.forEach(btn => {
+    if (btn.dataset.class === className) {
+      btn.classList.add('selected');
+    } else {
+      btn.classList.remove('selected');
+    }
+  });
+}
+
+classButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const className = btn.dataset.class;
+    selectedClass = className;
+    updateSelectedButton(className);
+    renderPerks(className);
+    document.querySelector('h1').textContent = `Perks de ${className.charAt(0).toUpperCase() + className.slice(1)}`;
+  });
 });
 
-// Renderiza la clase seleccionada por defecto al cargar
-renderPerks(selector.value);
+// Inicializar selección y perks
+updateSelectedButton(selectedClass);
+renderPerks(selectedClass);
