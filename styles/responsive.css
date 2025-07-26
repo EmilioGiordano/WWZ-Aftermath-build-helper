@@ -1,0 +1,164 @@
+/* Responsive Design for WWZ Classes App */
+
+/* Large screens (desktop) */
+@media (min-width: 1200px) {
+  #perks-container {
+    grid-template-columns: repeat(13, 60px) !important;
+    grid-template-rows: repeat(4, 60px) !important;
+  }
+}
+
+/* Medium screens (tablet landscape) */
+@media (max-width: 1199px) and (min-width: 768px) {
+  #perks-container {
+    grid-template-columns: repeat(13, 55px) !important;
+    grid-template-rows: repeat(4, 55px) !important;
+  }
+  
+  .perk-circle {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .perk-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .perk-empty {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+/* Small screens (tablet portrait) */
+@media (max-width: 767px) and (min-width: 481px) {
+  #perks-container {
+    grid-template-columns: repeat(13, 50px) !important;
+    grid-template-rows: repeat(4, 50px) !important;
+  }
+  
+  .perk-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .perk-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .perk-empty {
+    width: 50px;
+    height: 50px;
+  }
+  
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  #class-title {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  #perks-container {
+    grid-template-columns: repeat(3, 45px) !important;
+    grid-template-rows: repeat(16, 45px) !important;
+  }
+  
+  .perk-circle {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .perk-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .perk-empty {
+    width: 45px;
+    height: 45px;
+  }
+  
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  
+  #class-title {
+    font-size: 1.25rem !important;
+  }
+  
+  .class-btn {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 360px) {
+  #perks-container {
+    grid-template-columns: repeat(3, 40px) !important;
+    grid-template-rows: repeat(16, 40px) !important;
+  }
+  
+  .perk-circle {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .perk-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .perk-empty {
+    width: 40px;
+    height: 40px;
+  }
+  
+  h1 {
+    font-size: 1.25rem !important;
+  }
+  
+  #class-title {
+    font-size: 1rem !important;
+  }
+  
+  .class-btn {
+    font-size: 0.625rem !important;
+    padding: 0.375rem 0.5rem !important;
+  }
+}
+
+/* Adjust main content padding for sidebar */
+@media (min-width: 481px) {
+  .main-content {
+    padding-left: 60px;
+    transition: padding-left 0.3s ease;
+  }
+  
+  .main-content.sidebar-expanded {
+    padding-left: 280px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 481px) {
+  .main-content.sidebar-expanded {
+    padding-left: 240px;
+  }
+}
+
+/* Hide sidebar on very small screens */
+@media (max-width: 480px) {
+  .main-content {
+    padding-left: 0 !important;
+  }
+  
+  .main-content.sidebar-expanded {
+    padding-left: 0 !important;
+  }
+} 
