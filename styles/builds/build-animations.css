@@ -1,0 +1,204 @@
+/* Build System Animations */
+
+/* Slide In Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+/* Fade Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Scale Animations */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+/* Panel Animations */
+.build-panel {
+  animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.build-panel.closing {
+  animation: slideOutRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Section Animations */
+.build-section {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.build-section.show {
+  animation: scaleIn 0.2s ease-out;
+}
+
+.build-section.hide {
+  animation: fadeOut 0.2s ease-out;
+}
+
+/* Button Hover Effects */
+.build-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.build-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.build-btn:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* Pulse Animation for Important Actions */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 8px rgba(59, 130, 246, 0);
+  }
+}
+
+.build-btn-pulse {
+  animation: pulse 2s infinite;
+}
+
+/* Shake Animation for Errors */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.build-shake {
+  animation: shake 0.4s ease-in-out;
+}
+
+/* Glow Animation for Success */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  }
+  50% {
+    box-shadow: 0 8px 24px rgba(16, 185, 129, 0.6);
+  }
+}
+
+.build-glow {
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+/* Loading Spinner */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.build-loading {
+  position: relative;
+}
+
+.build-loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 0.8s ease-in-out infinite;
+}
+
+/* Stagger Animation for Multiple Elements */
+.build-stagger-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.build-stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.build-stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.build-stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.build-stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.build-stagger-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

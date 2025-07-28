@@ -1,0 +1,123 @@
+/* Build Panel Base Styles */
+.build-panel {
+  background: linear-gradient(145deg, rgba(17, 24, 39, 0.95), rgba(31, 41, 55, 0.9));
+  border: 1px solid rgba(75, 85, 99, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+  box-shadow: 
+    0 20px 25px -5px rgba(0, 0, 0, 0.4),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  padding: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.build-panel:hover {
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    0 25px 25px -5px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(75, 85, 99, 0.5);
+}
+
+/* Panel Header */
+.build-panel-header {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(147, 51, 234, 0.1));
+  border-bottom: 1px solid rgba(75, 85, 99, 0.3);
+  padding: 16px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.build-panel-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  transition: left 0.6s ease;
+}
+
+.build-panel:hover .build-panel-header::before {
+  left: 100%;
+}
+
+.build-panel-title {
+  color: #f9fafb;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.build-panel-title::before {
+  content: '⚙️';
+  font-size: 18px;
+  filter: drop-shadow(0 0 8px rgba(59, 130, 246, 0.3));
+}
+
+.build-panel-subtitle {
+  color: #9ca3af;
+  font-size: 12px;
+  margin: 4px 0 0 0;
+  opacity: 0.8;
+}
+
+/* Panel Content */
+.build-panel-content {
+  padding: 20px;
+}
+
+/* Panel Section */
+.build-section {
+  margin-bottom: 20px;
+}
+
+.build-section:last-child {
+  margin-bottom: 0;
+}
+
+.build-section-title {
+  color: #e5e7eb;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(75, 85, 99, 0.2);
+  position: relative;
+}
+
+.build-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 30px;
+  height: 1px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+}
+
+/* Compact mode for mobile */
+@media (max-width: 768px) {
+  .build-panel {
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .build-panel-header {
+    padding: 12px 16px;
+  }
+  
+  .build-panel-content {
+    padding: 16px;
+  }
+  
+  .build-section {
+    margin-bottom: 16px;
+  }
+}
