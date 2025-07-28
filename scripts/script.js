@@ -7,6 +7,9 @@ const layoutButtons = document.querySelectorAll('.layout-btn');
 let selectedClass = 'exterminator';
 let currentLayout = 'grid';
 
+// Initialize perk renderer
+let perkRenderer;
+
 // Vertical layout configuration for each class
 const verticalLayoutConfig = {
   exterminator: {
@@ -40,111 +43,16 @@ function renderPerks(classname) {
     .then(res => res.json())
     .then(data => {
       const perks = data[classname];
-      container.innerHTML = '';
-      
-      // Apply layout class
-      container.className = `layout-${currentLayout}`;
-      
-      if (currentLayout === 'grid') {
-        renderGridLayout(perks);
-      } else if (currentLayout === 'vertical') {
-        renderVerticalLayout(perks);
+      if (perkRenderer) {
+        perkRenderer.render(perks, currentLayout);
       }
     });
 }
 
-function renderGridLayout(perks) {
-  // Original grid layout
-  container.style.gridTemplateColumns = 'repeat(13, 60px)';
-  container.style.gridTemplateRows = 'repeat(4, 60px)';
-  
-  const grid = Array.from({ length: 4 }, () => Array(13).fill(null));
-  
-  perks.forEach(perk => {
-    const col = perk.column - 1;
-    const row = perk.row - 1;
-    if (col >= 0 && col < 13 && row >= 0 && row < 4) {
-      grid[row][col] = perk;
-    }
-  });
-  
-  for (let row = 0; row < 4; row++) {
-    for (let col = 0; col < 13; col++) {
-      const perk = grid[row][col];
-      const cell = createPerkCell(perk);
-      container.appendChild(cell);
-    }
-  }
-}
-
-function renderVerticalLayout(perks) {
-  // Set vertical grid layout (3 columns, 16 rows)
-  container.style.gridTemplateColumns = 'repeat(3, 60px)';
-  container.style.gridTemplateRows = 'repeat(16, 60px)';
-  
-  // Create 16x3 grid (16 rows, 3 columns)
-  const verticalGrid = Array.from({ length: 16 }, () => Array(3).fill(null));
-  
-  // Separate red and gray perks
-  const redPerks = perks.filter(perk => perk.type.toLowerCase() === 'red');
-  const grayPerks = perks.filter(perk => perk.type.toLowerCase() === 'gray');
-  
-  // Place red perks in horizontal rows (rows 0, 5, 10, 15)
-  const redRows = [0, 5, 10, 15];
-  redPerks.forEach((perk, index) => {
-    const rowIndex = redRows[Math.floor(index / 3)];
-    const colIndex = index % 3;
-    if (rowIndex < 16 && colIndex < 3) {
-      verticalGrid[rowIndex][colIndex] = perk;
-    }
-  });
-  
-  // Place gray perks in remaining positions, maintaining original relative order
-  let grayIndex = 0;
-  for (let row = 0; row < 16; row++) {
-    for (let col = 0; col < 3; col++) {
-      // Skip positions already occupied by red perks
-      if (verticalGrid[row][col] === null && grayIndex < grayPerks.length) {
-        verticalGrid[row][col] = grayPerks[grayIndex];
-        grayIndex++;
-      }
-    }
-  }
-  
-  // Render the vertical grid
-  for (let row = 0; row < 16; row++) {
-    for (let col = 0; col < 3; col++) {
-      const perk = verticalGrid[row][col];
-      const cell = createPerkCell(perk);
-      container.appendChild(cell);
-    }
-  }
-}
-
-function createPerkCell(perk) {
-  const cell = document.createElement('div');
-  
-  if (perk) {
-    cell.className = `perk-circle ${perk.type.toLowerCase() === 'red' ? 'perk-red' : 'perk-gray'}`;
-    
-    const iconDiv = document.createElement('div');
-    iconDiv.className = 'perk-icon';
-    cell.appendChild(iconDiv);
-    
-    cell.addEventListener('mouseenter', () => {
-      titleDiv.textContent = perk.name;
-      textDiv.textContent = perk.description;
-    });
-    cell.addEventListener('mouseleave', () => {
-      titleDiv.textContent = '';
-      textDiv.textContent = '';
-    });
-  } else {
-    cell.className = 'perk-empty';
-  }
-  
-  return cell;
-}
+// Initialize components when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  perkRenderer = new PerkRenderer(container, titleDiv, textDiv);
+});
 
 function updateSelectedButton(classname) {
   classButtons.forEach(btn => {
@@ -163,6 +71,11 @@ classButtons.forEach(btn => {
     updateSelectedButton(classname);
     renderPerks(classname);
     classTitle.textContent = classname.toUpperCase();
+    
+    // Notify other components of class change
+    document.dispatchEvent(new CustomEvent('classChanged', { 
+      detail: { className: classname } 
+    }));
   });
 });
 
@@ -182,6 +95,9 @@ layoutButtons.forEach(btn => {
     const layout = btn.dataset.layout;
     currentLayout = layout;
     updateLayoutButtons(layout);
+    if (perkRenderer) {
+      perkRenderer.setLayout(layout);
+    }
     renderPerks(selectedClass);
   });
 });

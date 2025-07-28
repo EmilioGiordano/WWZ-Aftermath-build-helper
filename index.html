@@ -24,14 +24,42 @@
 
   <!-- Top Header -->
   <div class="flex justify-between items-center p-6 relative z-10">
-    <h1 class="text-4xl font-bold tracking-wider">CLASSES</h1>
-    <div class="flex items-center gap-4">
-      <!-- Icons placeholders for top right (excluding party elements as requested) -->
+    <div class="w-1/3"></div>
+    <h1 class="text-4xl font-bold tracking-wider text-center flex-1">CLASSES</h1>
+    <div class="w-1/3 flex justify-end">
+      <button class="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
+        <span class="text-sm">ESC</span>
+        <span class="text-sm">BACK</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <div class="sidebar-toggle" id="sidebar-toggle">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </div>
+    
+    <div class="sidebar-content">
+      <nav class="sidebar-nav">
+            
+
+        
+
+        
+        <div class="sidebar-section">
+          <a href="#" class="sidebar-item">
+            <span>Help</span>
+          </a>
+        </div>
+      </nav>
     </div>
   </div>
 
   <!-- Main Content Container -->
-  <div class="flex flex-col items-center px-6 relative z-10">
+  <div id="main-content" class="main-content flex flex-col items-center px-6 relative z-10">
     
     <!-- Class Navigation Bar -->
     <div id="class-bar" class="flex justify-center items-center gap-2 mb-8">
@@ -81,18 +109,15 @@
       </div>
     </div>
 
+    
+
   </div>
 
-  <!-- Bottom Left ESC Button -->
-  <div class="absolute bottom-6 left-6 z-10">
-    <button class="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
-      <span class="text-sm">ESC</span>
-      <span class="text-sm">BACK</span>
-    </button>
-  </div>
 
+  <script src="scripts/build-system.js"></script>
+  <script src="scripts/perk-renderer.js"></script>
+  <script src="scripts/build-ui.js"></script>
   <script src="scripts/script.js"></script>
-  <script src="scripts/sidebar.js"></script>
   <script src="scripts/sidebar.js"></script>
 </body>
 </html>
