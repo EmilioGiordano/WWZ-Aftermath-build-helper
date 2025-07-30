@@ -421,12 +421,6 @@ class BuildUIRedesigned {
 
   updateBuildOptions(className) {
     const selector = document.getElementById('build-selector-new');
-    if (!selector) {
-      console.error('Build selector not found!');
-      return;
-    }
-    
-    console.log(`Updating builds for class: ${className}`);
     
     // Clear existing options except default
     while (selector.children.length > 1) {
@@ -435,16 +429,12 @@ class BuildUIRedesigned {
     
     // Add builds for current class
     const builds = window.buildSystem.getBuildsForClass(className);
-    console.log(`Found builds for ${className}:`, builds);
-    
     Object.keys(builds).forEach(buildName => {
       const option = document.createElement('option');
       option.value = `${className}|${buildName}`;
       option.textContent = buildName;
       selector.appendChild(option);
     });
-    
-    console.log(`Added ${Object.keys(builds).length} builds to selector`);
   }
 
   showSection(section) {
