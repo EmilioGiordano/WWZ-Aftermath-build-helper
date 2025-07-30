@@ -12,33 +12,90 @@ class BuildSystem {
   loadBuilds() {
     this.builds = {
       exterminator: {
-        "Fire Claymore": [1, 2, 4, 3, 3, 1, 4, 2, 4], // 9 elementos para columnas [2,3,4,6,7,8,10,11,12]
-        "Tank Build": [1, 3, 2, 4, 2, 2, 3, 1, 3],
-        "DPS Build": [2, 1, 3, 2, 4, 3, 1, 4, 2],
-        "Support Build": [3, 2, 1, 4, 3, 2, 1, 3, 2],
-        "Crowd Control": [4, 3, 2, 1, 4, 3, 2, 1, 4]
+        "Fire Claymore": {
+          build: [1, 2, 4, 3, 3, 1, 4, 2, 4],
+          description: "Focus on fire damage and melee combat. Uses Claymore for devastating close-range attacks with enhanced fire effects."
+        },
+        "Tank Build": {
+          build: [1, 3, 2, 4, 2, 2, 3, 1, 3],
+          description: "High survivability build focused on damage reduction and crowd control. Perfect for front-line combat."
+        },
+        "DPS Build": {
+          build: [2, 1, 3, 2, 4, 3, 1, 4, 2],
+          description: "Maximum damage output with explosive weapons. Prioritizes heavy weapon damage and ammo efficiency."
+        },
+        "Support Build": {
+          build: [3, 2, 1, 4, 3, 2, 1, 3, 2],
+          description: "Team-oriented build providing equipment and ammunition support while maintaining decent combat effectiveness."
+        },
+        "Crowd Control": {
+          build: [4, 3, 2, 1, 4, 3, 2, 1, 4],
+          description: "Specializes in controlling large groups of enemies with stunning and slowing effects."
+        }
       },
       gunslinger: {
-        "Assault Build": [1, 2, 1, 3, 2, 1, 3, 2, 4],
-        "Sniper Build": [2, 1, 4, 1, 3, 2, 1, 4, 2],
-        "Run & Gun": [3, 2, 1, 4, 2, 3, 4, 1, 3],
-        "Support DPS": [2, 3, 4, 1, 2, 4, 3, 2, 1]
+        "Assault Build": {
+          build: [1, 2, 1, 3, 2, 1, 3, 2, 4],
+          description: "Aggressive close-range combat build with rapid-fire weapons and enhanced mobility for assault tactics."
+        },
+        "Sniper Build": {
+          build: [2, 1, 4, 1, 3, 2, 1, 4, 2],
+          description: "Long-range precision build focused on headshot damage and improved accuracy with sniper rifles."
+        },
+        "Run & Gun": {
+          build: [3, 2, 1, 4, 2, 3, 4, 1, 3],
+          description: "High mobility build combining speed with sustained fire for hit-and-run tactics."
+        },
+        "Support DPS": {
+          build: [2, 3, 4, 1, 2, 4, 3, 2, 1],
+          description: "Balanced damage dealer that provides team support while maintaining consistent DPS output."
+        }
       },
       hellraiser: {
-        "Explosives Build": [1, 3, 2, 4, 1, 2, 3, 1, 4],
-        "Demolition": [4, 2, 3, 1, 4, 2, 1, 3, 2],
-        "Area Control": [2, 4, 1, 3, 2, 4, 1, 2, 3],
-        "Breach Expert": [3, 1, 4, 2, 3, 1, 2, 4, 1]
+        "Explosives Build": {
+          build: [1, 3, 2, 4, 1, 2, 3, 1, 4],
+          description: "Maximum explosive damage with enhanced blast radius and improved rocket launcher effectiveness."
+        },
+        "Demolition": {
+          build: [4, 2, 3, 1, 4, 2, 1, 3, 2],
+          description: "Specialized in breaking through defenses and dealing massive structural damage to enemy positions."
+        },
+        "Area Control": {
+          build: [2, 4, 1, 3, 2, 4, 1, 2, 3],
+          description: "Controls battlefield zones with strategic explosive placement and area denial tactics."
+        },
+        "Breach Expert": {
+          build: [3, 1, 4, 2, 3, 1, 2, 4, 1],
+          description: "Expert at creating openings and clearing paths with precision explosive techniques."
+        }
       },
       medic: {
-        "Combat Medic": [1, 3, 2, 4, 1, 3, 2, 4, 1],
-        "Field Doctor": [2, 4, 1, 3, 2, 4, 1, 3, 2],
-        "Support Healer": [3, 1, 4, 2, 3, 1, 4, 2, 3]
+        "Combat Medic": {
+          build: [1, 3, 2, 4, 1, 3, 2, 4, 1],
+          description: "Front-line medic capable of healing teammates while maintaining combat effectiveness in battle."
+        },
+        "Field Doctor": {
+          build: [2, 4, 1, 3, 2, 4, 1, 3, 2],
+          description: "Dedicated healer with enhanced medical equipment and improved healing efficiency for the team."
+        },
+        "Support Healer": {
+          build: [3, 1, 4, 2, 3, 1, 4, 2, 3],
+          description: "Provides continuous healing support with extended range and reduced cooldowns on medical abilities."
+        }
       },
       fixer: {
-        "Ammo Support": [2, 3, 1, 4, 2, 3, 1, 4, 2],
-        "Equipment Master": [1, 4, 2, 3, 1, 4, 2, 3, 1],
-        "Resource Manager": [3, 2, 4, 1, 3, 2, 4, 1, 3]
+        "Ammo Support": {
+          build: [2, 3, 1, 4, 2, 3, 1, 4, 2],
+          description: "Keeps the team supplied with ammunition and provides enhanced weapon maintenance support."
+        },
+        "Equipment Master": {
+          build: [1, 4, 2, 3, 1, 4, 2, 3, 1],
+          description: "Specializes in equipment distribution and maintenance with improved gear effectiveness."
+        },
+        "Resource Manager": {
+          build: [3, 2, 4, 1, 3, 2, 4, 1, 3],
+          description: "Efficiently manages team resources including health kits, ammo, and special equipment distribution."
+        }
       }
     };
   }
