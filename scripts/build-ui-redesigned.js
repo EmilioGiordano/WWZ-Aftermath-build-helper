@@ -18,6 +18,8 @@ class BuildUIRedesigned {
     // Initialize search filters after a short delay to ensure elements exist
     setTimeout(() => {
       this.initializeSearchFilters();
+      // Initialize builds for current class
+      this.updateBuildOptions(this.currentClass);
     }, 200);
   }
 
@@ -421,6 +423,7 @@ class BuildUIRedesigned {
 
   updateBuildOptions(className) {
     const selector = document.getElementById('build-selector-new');
+    if (!selector || !window.buildSystem) return;
     
     // Clear existing options except default
     while (selector.children.length > 1) {
@@ -429,6 +432,7 @@ class BuildUIRedesigned {
     
     // Add builds for current class
     const builds = window.buildSystem.getBuildsForClass(className);
+    
     Object.keys(builds).forEach(buildName => {
       const option = document.createElement('option');
       option.value = `${className}|${buildName}`;
