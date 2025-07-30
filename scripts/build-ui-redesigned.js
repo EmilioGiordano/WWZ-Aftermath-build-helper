@@ -4,6 +4,9 @@ class BuildUIRedesigned {
     this.container = null;
     this.currentClass = 'exterminator';
     this.isAnimating = false;
+    this.searchQuery = '';
+    this.selectedCategory = 'all';
+    this.selectedTag = 'all';
     this.init();
   }
 
@@ -11,6 +14,11 @@ class BuildUIRedesigned {
     this.createBuildSystemContainer();
     this.setupEventListeners();
     this.setupResponsiveHandling();
+    
+    // Initialize search filters after a short delay to ensure elements exist
+    setTimeout(() => {
+      this.initializeSearchFilters();
+    }, 200);
   }
 
   createBuildSystemContainer() {
@@ -25,8 +33,14 @@ class BuildUIRedesigned {
     this.container.className = 'build-system-container';
     this.container.innerHTML = this.getContainerHTML();
 
-    // Append to body
-    document.body.appendChild(this.container);
+    // Append to build panel container
+    const buildPanelContainer = document.getElementById('build-panel-container');
+    if (buildPanelContainer) {
+      buildPanelContainer.appendChild(this.container);
+    } else {
+      // Fallback to body if container not found
+      document.body.appendChild(this.container);
+    }
   }
 
   getContainerHTML() {
@@ -38,12 +52,61 @@ class BuildUIRedesigned {
         </div>
         
         <div class="build-panel-content">
-          <!-- Build Selection Section -->
+          <!-- Build Search Section -->
           <div class="build-section build-stagger-item" id="build-selection-section">
-            <h4 class="build-section-title">Select Build</h4>
-            <select id="build-selector-new" class="build-select">
-              <option value="">Choose a preset build...</option>
-            </select>
+            <h4 class="build-section-title">
+              <span class="build-search-icon">🔍</span>
+              Build Library
+            </h4>
+            
+            <!-- Search Input -->
+            <div class="build-search-container">
+              <input 
+                id="build-search-input" 
+                class="build-search-input" 
+                type="text" 
+                placeholder="Search builds by name..."
+                autocomplete="off"
+              >
+              <div class="build-search-icon-wrapper">
+                <span class="build-search-magnifier">🔎</span>
+              </div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="build-filters">
+              <!-- Category Filter -->
+              <div class="build-filter-group">
+                <label class="build-filter-label">Category:</label>
+                <div class="build-filter-buttons" id="category-filters">
+                  <button class="build-filter-btn active" data-category="all">All</button>
+                  <button class="build-filter-btn" data-category="horde">Horde</button>
+                  <button class="build-filter-btn" data-category="extinction">Extinction</button>
+                  <button class="build-filter-btn" data-category="campaign">Campaign</button>
+                </div>
+              </div>
+              
+              <!-- Tags Filter -->
+              <div class="build-filter-group">
+                <label class="build-filter-label">Role:</label>
+                <div class="build-filter-buttons" id="tag-filters">
+                  <button class="build-filter-btn active" data-tag="all">All</button>
+                  <button class="build-filter-btn" data-tag="dps">DPS</button>
+                  <button class="build-filter-btn" data-tag="tank">Tank</button>
+                  <button class="build-filter-btn" data-tag="support">Support</button>
+                  <button class="build-filter-btn" data-tag="crowd-control">CC</button>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Search Results -->
+            <div class="build-search-results" id="build-search-results">
+              <div class="build-search-empty">
+                <span class="build-empty-icon">📚</span>
+                <p>No builds found</p>
+                <small>Try adjusting your search or filters</small>
+              </div>
+            </div>
           </div>
 
           <!-- Build Creation Section -->
@@ -129,9 +192,33 @@ class BuildUIRedesigned {
   }
 
   setupEventListeners() {
-    // Build selector
-    document.getElementById('build-selector-new').addEventListener('change', (e) => {
-      this.handleBuildSelection(e.target.value);
+    // Build search input
+    document.getElementById('build-search-input').addEventListener('input', (e) => {
+      this.handleSearch(e.target.value);
+    });
+
+    // Category filters
+    document.getElementById('category-filters').addEventListener('click', (e) => {
+      if (e.target.classList.contains('build-filter-btn')) {
+        this.handleCategoryFilter(e.target.dataset.category);
+        this.updateFilterButtons('category-filters', e.target);
+      }
+    });
+
+    // Tag filters
+    document.getElementById('tag-filters').addEventListener('click', (e) => {
+      if (e.target.classList.contains('build-filter-btn')) {
+        this.handleTagFilter(e.target.dataset.tag);
+        this.updateFilterButtons('tag-filters', e.target);
+      }
+    });
+
+    // Search results clicks
+    document.getElementById('build-search-results').addEventListener('click', (e) => {
+      const buildItem = e.target.closest('.build-result-item');
+      if (buildItem) {
+        this.handleBuildSelection(buildItem.dataset.value);
+      }
     });
 
     // Create build button
@@ -178,6 +265,7 @@ class BuildUIRedesigned {
     document.addEventListener('classChanged', (e) => {
       this.currentClass = e.detail.className;
       this.updateBuildOptions(e.detail.className);
+      this.initializeSearchFilters();
     });
   }
 
@@ -191,17 +279,11 @@ class BuildUIRedesigned {
   }
 
   handleResponsiveChange(isMobile) {
-    if (isMobile) {
-      // Move container to main content area on mobile
-      const mainContent = document.getElementById('main-content');
-      if (mainContent && this.container.parentNode !== mainContent) {
-        mainContent.appendChild(this.container);
-      }
-    } else {
-      // Keep container fixed on desktop
-      if (this.container.parentNode !== document.body) {
-        document.body.appendChild(this.container);
-      }
+    // El contenedor ahora siempre está en build-panel-container
+    // Los estilos CSS se encargan del responsive behavior
+    const buildPanelContainer = document.getElementById('build-panel-container');
+    if (buildPanelContainer && this.container.parentNode !== buildPanelContainer) {
+      buildPanelContainer.appendChild(this.container);
     }
   }
 
@@ -339,6 +421,12 @@ class BuildUIRedesigned {
 
   updateBuildOptions(className) {
     const selector = document.getElementById('build-selector-new');
+    if (!selector) {
+      console.error('Build selector not found!');
+      return;
+    }
+    
+    console.log(`Updating builds for class: ${className}`);
     
     // Clear existing options except default
     while (selector.children.length > 1) {
@@ -347,12 +435,16 @@ class BuildUIRedesigned {
     
     // Add builds for current class
     const builds = window.buildSystem.getBuildsForClass(className);
+    console.log(`Found builds for ${className}:`, builds);
+    
     Object.keys(builds).forEach(buildName => {
       const option = document.createElement('option');
       option.value = `${className}|${buildName}`;
       option.textContent = buildName;
       selector.appendChild(option);
     });
+    
+    console.log(`Added ${Object.keys(builds).length} builds to selector`);
   }
 
   showSection(section) {
@@ -423,6 +515,104 @@ class BuildUIRedesigned {
         }
       }, 300);
     }, 3000);
+  }
+
+  // Search and Filter Methods
+  handleSearch(query) {
+    this.searchQuery = query.toLowerCase();
+    this.updateSearchResults();
+  }
+
+  handleCategoryFilter(category) {
+    this.selectedCategory = category;
+    this.updateSearchResults();
+  }
+
+  handleTagFilter(tag) {
+    this.selectedTag = tag;
+    this.updateSearchResults();
+  }
+
+  updateFilterButtons(containerId, activeButton) {
+    const container = document.getElementById(containerId);
+    container.querySelectorAll('.build-filter-btn').forEach(btn => {
+      btn.classList.remove('active');
+    });
+    activeButton.classList.add('active');
+  }
+
+  updateSearchResults() {
+    const resultsContainer = document.getElementById('build-search-results');
+    const builds = this.getFilteredBuilds();
+    
+    if (builds.length === 0) {
+      resultsContainer.innerHTML = `
+        <div class="build-search-empty">
+          <span class="build-empty-icon">🔍</span>
+          <p>No builds found</p>
+          <small>Try adjusting your search or filters</small>
+        </div>
+      `;
+      return;
+    }
+
+    resultsContainer.innerHTML = builds.map(build => `
+      <div class="build-result-item" data-value="${build.className}|${build.name}">
+        <div class="build-result-name">${build.name}</div>
+        <div class="build-result-meta">
+          <span class="build-result-category">${build.category || 'General'}</span>
+          <div class="build-result-tags">
+            ${(build.tags || []).map(tag => `<span class="build-result-tag">${tag}</span>`).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  getFilteredBuilds() {
+    // Obtener builds del sistema actual
+    const builds = [];
+    const currentBuilds = window.buildSystem?.getBuildsForClass(this.currentClass) || {};
+    
+    Object.keys(currentBuilds).forEach(buildName => {
+      const buildData = currentBuilds[buildName];
+      builds.push({
+        name: buildName,
+        className: this.currentClass,
+        build: buildData,
+        category: buildData.category || 'general',
+        tags: buildData.tags || []
+      });
+    });
+
+    // Aplicar filtros
+    return builds.filter(build => {
+      // Filtro de búsqueda
+      if (this.searchQuery && !build.name.toLowerCase().includes(this.searchQuery)) {
+        return false;
+      }
+
+      // Filtro de categoría
+      if (this.selectedCategory && this.selectedCategory !== 'all' && 
+          build.category !== this.selectedCategory) {
+        return false;
+      }
+
+      // Filtro de tags
+      if (this.selectedTag && this.selectedTag !== 'all' && 
+          !build.tags.includes(this.selectedTag)) {
+        return false;
+      }
+
+      return true;
+    });
+  }
+
+  initializeSearchFilters() {
+    this.searchQuery = '';
+    this.selectedCategory = 'all';
+    this.selectedTag = 'all';
+    this.updateSearchResults();
   }
 }
 

@@ -74,7 +74,7 @@
       
     </div>
 
-    <!-- Perks Section -->
+    <!-- Main Content Layout (Perks + Build Panel) -->
     <div class="w-full max-w-7xl relative">
       <!-- Player Level and Class Display -->
       <div class="flex items-center justify-between mb-6">
@@ -86,7 +86,7 @@
           <h2 id="class-title" class="text-2xl font-bold uppercase tracking-wider">EXTERMINATOR</h2>
         </div>
         
-        <!-- Layout Switcher -->
+        <!-- Layout Switcher
         <div class="layout-switcher">
           <button id="layout-toggle" class="layout-btn active" data-layout="grid" title="Grid Layout">
             <span class="layout-icon">⊞</span>
@@ -95,10 +95,21 @@
             <span class="layout-icon">⫿</span>
           </button>
         </div>
-      </div>
+      </div> -->
 
-      <!-- Perks Grid -->
-      <div id="perks-container" class="grid gap-4 justify-center" style="grid-template-columns: repeat(13, 60px); grid-template-rows: repeat(4, 60px);"></div>
+      <!-- Flex Container for Perks and Build Panel -->
+      <div class="flex gap-8 items-start">
+        <!-- Perks Section -->
+        <div class="flex-1">
+          <!-- Perks Grid -->
+          <div id="perks-container" class="grid gap-4 justify-center" style="grid-template-columns: repeat(13, 60px); grid-template-rows: repeat(4, 60px);"></div>
+        </div>
+        
+        <!-- Build Panel Container -->
+        <div id="build-panel-container" class="build-panel-side">
+          <!-- El build-panel se insertará aquí via JavaScript -->
+        </div>
+      </div>
     </div>
 
     <!-- Bottom description Area -->

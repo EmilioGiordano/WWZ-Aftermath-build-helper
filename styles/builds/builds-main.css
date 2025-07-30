@@ -3,55 +3,51 @@
 @import 'build-controls.css';
 @import 'build-progress.css';
 @import 'build-animations.css';
+@import 'build-search.css';
 
 /* Build system container positioning */
 .build-system-container {
-  position: fixed;
-  top: 120px;
-  right: 20px;
-  z-index: 100;
+  position: static;
+  width: 500px;
+  max-height: 800px;
+  z-index: 10;
+}
+
+/* Build panel side container */
+.build-panel-side {
   width: 320px;
-  max-height: calc(100vh - 140px);
-  overflow-y: auto;
-  
-  /* Custom scrollbar */
-  scrollbar-width: thin;
-  scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
+  flex-shrink: 0;
 }
 
-.build-system-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.build-system-container::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.build-system-container::-webkit-scrollbar-thumb {
-  background: rgba(107, 114, 128, 0.5);
-  border-radius: 3px;
-}
-
-.build-system-container::-webkit-scrollbar-thumb:hover {
-  background: rgba(107, 114, 128, 0.7);
-}
 
 /* Responsive positioning */
 @media (max-width: 1200px) {
   .build-system-container {
-    right: 10px;
+    width: 280px;
+  }
+  
+  .build-panel-side {
     width: 280px;
   }
 }
 
 @media (max-width: 768px) {
+  /* En móviles, cambiar a layout vertical */
+  .flex.gap-8.items-start {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
   .build-system-container {
-    position: static;
     width: 100%;
     max-width: none;
     max-height: none;
-    margin: 20px auto;
-    padding: 0 20px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .build-panel-side {
+    width: 100%;
   }
 }
 

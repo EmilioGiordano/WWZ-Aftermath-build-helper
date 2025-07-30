@@ -14,14 +14,31 @@ class BuildSystem {
       exterminator: {
         "Fire Claymore": [1, 2, 4, 3, 3, 1, 4, 2, 4], // 9 elementos para columnas [2,3,4,6,7,8,10,11,12]
         "Tank Build": [1, 3, 2, 4, 2, 2, 3, 1, 3],
-        "DPS Build": [2, 1, 3, 2, 4, 3, 1, 4, 2]
+        "DPS Build": [2, 1, 3, 2, 4, 3, 1, 4, 2],
+        "Support Build": [3, 2, 1, 4, 3, 2, 1, 3, 2],
+        "Crowd Control": [4, 3, 2, 1, 4, 3, 2, 1, 4]
       },
       gunslinger: {
         "Assault Build": [1, 2, 1, 3, 2, 1, 3, 2, 4],
-        "Sniper Build": [2, 1, 4, 1, 3, 2, 1, 4, 2]
+        "Sniper Build": [2, 1, 4, 1, 3, 2, 1, 4, 2],
+        "Run & Gun": [3, 2, 1, 4, 2, 3, 4, 1, 3],
+        "Support DPS": [2, 3, 4, 1, 2, 4, 3, 2, 1]
       },
       hellraiser: {
-        "Explosives Build": [1, 3, 2, 4, 1, 2, 3, 1, 4]
+        "Explosives Build": [1, 3, 2, 4, 1, 2, 3, 1, 4],
+        "Demolition": [4, 2, 3, 1, 4, 2, 1, 3, 2],
+        "Area Control": [2, 4, 1, 3, 2, 4, 1, 2, 3],
+        "Breach Expert": [3, 1, 4, 2, 3, 1, 2, 4, 1]
+      },
+      medic: {
+        "Combat Medic": [1, 3, 2, 4, 1, 3, 2, 4, 1],
+        "Field Doctor": [2, 4, 1, 3, 2, 4, 1, 3, 2],
+        "Support Healer": [3, 1, 4, 2, 3, 1, 4, 2, 3]
+      },
+      fixer: {
+        "Ammo Support": [2, 3, 1, 4, 2, 3, 1, 4, 2],
+        "Equipment Master": [1, 4, 2, 3, 1, 4, 2, 3, 1],
+        "Resource Manager": [3, 2, 4, 1, 3, 2, 4, 1, 3]
       }
     };
   }

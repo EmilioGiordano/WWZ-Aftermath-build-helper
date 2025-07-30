@@ -71,6 +71,29 @@
 /* Panel Content */
 .build-panel-content {
   padding: 20px;
+  max-height: 750px;
+  overflow-y: auto;
+  
+  /* Custom scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(107, 114, 128, 0.5) transparent;
+}
+
+.build-panel-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.build-panel-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.build-panel-content::-webkit-scrollbar-thumb {
+  background: rgba(107, 114, 128, 0.5);
+  border-radius: 3px;
+}
+
+.build-panel-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 114, 128, 0.7);
 }
 
 /* Panel Section */
@@ -115,6 +138,7 @@
   
   .build-panel-content {
     padding: 16px;
+    max-height: none;
   }
   
   .build-section {
